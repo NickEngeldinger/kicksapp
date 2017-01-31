@@ -1,0 +1,26 @@
+<h3>Add Kick</h3>
+<div ng-show="alertOk" class="alert success">
+	<p>
+		<strong>Success</strong> - A new kick was added
+		<a ng-click="alertOk=false" class="close">×</a>
+	</p>
+</div>
+<div ng-show="alertErr" class="alert error">
+	<p>
+		<strong>Error</strong> - A new kick was <em>not</em> added
+		<a ng-click="alertErr=false" class="close">×</a>
+	</p>
+</div>
+<form name="addForm">
+	<input type="text" name="kName" ng-model="$ctrl.kName" placeholder="Kick Name" />
+	<input type="text" name="model" ng-model="$ctrl.model" placeholder="Model" />
+	<input type="text" name="brand" ng-model="$ctrl.brand" placeholder="Brand" />
+	<select 
+		name="activeStatus" 
+		ng-model="$ctrl.activeStatus" 
+		ng-options="status.val as status.label for status in statusOptions"
+	>
+		<option class="placeholder" value="">Select Active Status</option>
+	</select>
+</form>
+<button class="button" ng-click="$ctrl.addKick()">Add Kick</button>

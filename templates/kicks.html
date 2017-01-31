@@ -1,0 +1,8 @@
+<ul class="menu">
+  <li ng-repeat="kick in $ctrl.kicks">
+	<a ui-sref="kick({ kickId: kick.id })" class="thumbnail">
+		<img src="http://sneakerbardetroit.com/wp-content/uploads/2014/01/air-jordan-5-oregon-duckman-pe-4.jpg" alt="">
+		{{kick.name}}
+	</a>
+  </li>
+</ul>
